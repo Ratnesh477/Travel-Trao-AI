@@ -26,6 +26,19 @@ app.use(express.json());
 app.use('/api/auth', authRoutes);
 app.use('/api/trips', tripRoutes);
 
+// Root endpoint
+app.get('/', (req, res) => {
+  res.status(200).json({ 
+    message: 'Welcome to the Trao AI Travel Planner API Gateway', 
+    status: 'Healthy',
+    endpoints: {
+      auth: '/api/auth',
+      trips: '/api/trips',
+      health: '/health'
+    }
+  });
+});
+
 // Health check endpoint
 app.get('/health', (req, res) => {
   res.status(200).json({ status: 'OK', message: 'Trao Travel Planner Backend is healthy' });
