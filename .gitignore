@@ -1,0 +1,27 @@
+# Dependency directories
+node_modules/
+**/node_modules/
+
+# Next.js build output
+.next/
+**/out/
+
+# Backend build output
+backend/dist/
+backend/mock_db.json
+
+# Env and security keys
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+backend/.env
+frontend/.env
+
+# IDE / System configurations
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.log
